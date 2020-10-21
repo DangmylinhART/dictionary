@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Word List</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="./style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <h1>Word List</h1>
+  <% if(wordsList.length) { wordsList.forEach(element => {  %>
+  consol.log(element.id)
+  <p><a href="/words/single-word/<%= element.id %> "><%= element.word %></a></p>
+  <% })} else { %>
+  <h1>No Words Found</h1>
+  <% } %>
+  <button>
+    <a href="words/add-word"> Add A Word </a>
+  </button>
+  <script src="./main.js"></script>
+</body>
+
+</html>
